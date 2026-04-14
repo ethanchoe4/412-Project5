@@ -1,17 +1,37 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
+<html lang="en">
+<head>
     <title>Index</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
+    <link id="mainStyleSheet" rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  </head>
-
-  <body>
+</head>
+<body>
     <header>
-        <div id="header-placeholder"></div>
+      <div class="header">
+        <nav>
+          <ul>
+            <li><a href="index.html" class="name">Ethan Choe</a></li>
+            <li>
+              <div class="icon">
+                <button onclick="toggleStyleSheet()" type="button">
+                  <i class="fa-solid fa-palette header-icon"></i>
+                </button>
+            </div>
+            </li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="qualifications.html">Qualifications</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="genai.html">GenAI</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
+
+    <div class="tamu-image">
+        <img src="tamu-campus.jpeg" alt="TAMU Campus">
+    </div>
 
     <div class="profile">
         <div>
@@ -32,57 +52,38 @@
                         linkedin.com/in/ethanchoe1
                     </a>
                 </li>
+                <li>
+                    <a href="https://www.instagram.com/ethanchoe04" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-instagram"></i>
+                        instagram.com/ethanchoe04
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
 
     <div class="about-me">
         <h1>About Me</h1>
-        <p>I am a junior computer science major at Texas A&M University. I am aspiring to be a software developer with specific
-           interests in backend development, computer vision, and data analysis. I have strong foundatations in object oriented
-           programming in Python, as displayed in my internships and undergraduate reserach. I am a highly collabrative team
-           member, and in these projects I communicated with teams to deliver on project goals and create meaningful solutions.
-           I am eager to continue applying my technical skills and collabrative mindset to future projects and endeavors.
+        <p>
+          I am a junior computer science major at Texas A&M University. I am aspiring to be a software engineer with specific interests in backend development, computer vision, and data analysis. I have strong foundations in object oriented programming in Python, as displayed in my internships and undergraduate research. I am a highly collaborative team member, and in these projects I communicated with teams to deliver on project goals and create meaningful solutions. I am eager to continue applying my technical skills and collaborative mindset to future projects and endeavors. 
         </p>
     </div>
-
     <div class="interests">
-        <div class="interst1">
-            <h1>Computer Vision</h1>
-            <p>I am highly interested in utilizing computer vision to solve real world problems and my experiences reflect this.
-               I have designed computer vision models that can detect, segment, and track objects in many different scenarios.
-               Some of these experiences include my internship, where I fine-tuned a ResNet18 model to predict parking spot 
-               occupancy at 98% accuracy and my reserach group where I developed a instance segmentation script to create a 
-               dataset of thousands of cow masks.
-            </p>
-        </div>
-        <div class="interest2">
-            <h1>Backend Development</h1>
-            <p>I have also began exploring the world of backend development. With my previous Python experiences I quickly
-               picked up the Django framework and have begun building personal projects with it. My experience with PostgreSQL
-               has been particularly valuable, allowing me to build robust, data-driven applications. I am interesting in furthering
-               my backend experinces by learning more advanced topics like API optimizations, security features, and event-driven
-               architecture.
-            </p>
-        </div>
+      <div class="interests-grid">
+          <div class="interest-box">
+              <h1>Computer Vision</h1>
+              <p>
+                I am highly interested in utilizing computer vision to solve real world problems and my experiences reflect this. I have designed computer vision models that can detect, segment, and track objects in many different scenarios. Some of these experiences include my internship, where I fine-tuned a ResNet18 model to predict parking spot occupancy at 98% accuracy and my research group where I developed an instance segmentation script to create a dataset of thousands of cow masks. In both of these projects I fine-tuned pretrained models to specifically fit my applications. In these experiences I have learned all the different applications where computer vision solutions can be applied and I am excited to begin implementing computer vision solutions.
+              </p>
+          </div>
+          <div class="interest-box">
+              <h1>Backend Development</h1>
+              <p>
+                I have also begun exploring the world of backend development to expand my software development experience. With my previous Python experiences I quickly picked up the Django framework and have begun building personal projects with it. My experience with PostgreSQL has been particularly valuable, allowing me to build robust, data-driven applications. I am interested in furthering my backend experiences by learning more advanced topics like API optimizations, security features, and event-driven architecture. I am excited to have an extensive background software development to allow me to work on projects from a range of different fields effectively.
+              </p>
+          </div>
+      </div>
     </div>
+    <script src="functions.js"></script>
   </body>
 </html>
-
-<script>
-  const headerPlaceholder = document.getElementById('header-placeholder');
-
-  fetch('header.html')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Header not found');
-      }
-      return response.text();
-    })
-    .then(data => {
-      headerPlaceholder.innerHTML = data;
-    })
-    .catch(error => {
-      console.error('Error loading the header:', error);
-    });
-</script>

@@ -4,33 +4,40 @@
       <title>Service</title>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="style1.css">
+      <link id="mainStyleSheet" rel="stylesheet" href="style1.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   </head>
     <body>
         <header>
-            <div id="header-placeholder"></div>
+          <div class="header">
+            <nav>
+              <ul>
+                <li><a href="index.html" class="name">Ethan Choe</a></li>
+                <li>
+                  <div class="icon">
+                    <button onclick="toggleStyleSheet()" type="button">
+                      <i class="fa-solid fa-palette header-icon"></i>
+                    </button>
+                </div>
+                </li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="qualifications.html">Qualifications</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="genai.html">GenAI</a></li>
+              </ul>
+            </nav>
+          </div>
         </header>
+        <div class="service-image">
+          <img src="street-cleanup.jpeg" alt="Street Cleanup Image">
+        </div>
+        <div class="service-description">
+          <h2>Giving back to the community</h2>
+          <p>
+            Outside of technical applications, I have a large passion for giving back to the community. I try to accomplish this in a few ways. One of them is through my previous student organization <a href="https://www.tamufest.org/">FEST</a>. As a 'Big', I mentored 5 freshman stem majors as they transitioned from high school into college. I guided them through stressful parts of freshman year like course registration and the ETAM process. I also served the community through events like street clean ups and other service events with my organizations.
+          </p>
+        </div>
+        <script src="functions.js"></script>
     </body>
 </html>
-
-
-
-<script>
-  const headerPlaceholder = document.getElementById('header-placeholder');
-
-  fetch('header.html')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Header not found');
-      }
-      return response.text();
-    })
-    .then(data => {
-      headerPlaceholder.innerHTML = data;
-    })
-    .catch(error => {
-      console.error('Error loading the header:', error);
-    });
-</script>

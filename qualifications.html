@@ -4,14 +4,31 @@
       <title>Qualifications</title>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="style1.css">
+      <link id="mainStyleSheet" rel="stylesheet" href="style1.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   </head>
-<body>
+  <body>
      <header>
-        <div id="header-placeholder"></div>
-    </header>
+        <div class="header">
+          <nav>
+            <ul>
+              <li><a href="index.html" class="name">Ethan Choe</a></li>
+              <li>
+                <div class="icon">
+                  <button onclick="toggleStyleSheet()" type="button">
+                    <i class="fa-solid fa-palette header-icon"></i>
+                  </button>
+              </div>
+              </li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="qualifications.html">Qualifications</a></li>
+              <li><a href="service.html">Service</a></li>
+              <li><a href="genai.html">GenAI</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
     <div class="resume-grid">
         <div class="resume-image">
@@ -20,33 +37,33 @@
             </a>
         </div>
         <div class="resume-description">
-          <h2>Resume</h2>
-          <p>Through my coursework at Texas A&M University, internships, and personal projects, I have gained hands-on 
-             experience in software and AI development. My resume highlights my skills in a variety of programming 
-             languages and frameworks, with a strong focus on computer vision. It also details my contributions to 
-             projects like a parking spot detection model and a full-stack CRM for insurance agents. My work has been 
-             crucial to many different teams where both my technical and collaboration skills have led to real world solutions.
-          </p>
+          <div>
+            <h2>Technical Skills</h2>
+            <p>Through my internships, undergraduate research, projects, and coursework I have gained a comprehensive understanding of software development and machine learning.</p>
+            <p>My technical skills consist of:</p>
+            <ul>
+              <li>
+                <strong>Programming languages:</strong> Python, C++, Java, HTML, CSS
+              </li>
+              <li>
+                <strong>Developer Tools:</strong> Git, HPC, Linux, macOS
+              </li>
+              <li>
+                <strong>Libraries/Frameworks:</strong> PostgreSQL, PyTorch, Pandas, OpenCV, Seaborn, Django
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2>Areas of Interest</h2>
+            <p>
+              Within computer science, I have specific interests in machine learning and specifically computer vision. Many of my projects have dealt with applications of computer vision across various fields including <a href="https://aggiecollaborate.tamu.edu/design-and-development-of-ai-machine-learning-models-for-animal-systems/">animal science</a>, <a href="https://news.byu.edu/intellect/innovative-group-of-byu-students-roll-out-new-ai-tech-to-solve-parking-problems">parking monitoring</a>, and a <a href="https://devpost.com/software/reclaimai">visual lost-and-found tool</a>. I have worked with object segmentation to create a large dataset of cow masks to train a real-time disease prediction model. I have also developed a parking spot occupancy detection model, achieving 98% accuracy by tuning the hyper-parameters of a pretrained model. Additionally my work on a AI-powered lost and found tool has allowed me to combine both computer vision and natural language processing in a real-world application. 
+            </p>
+          </div>
         </div>
     </div>
+    <script src="functions.js"></script>
+  </body>
 </html>
 
 
 
-<script>
-  const headerPlaceholder = document.getElementById('header-placeholder');
-
-  fetch('header.html')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Header not found');
-      }
-      return response.text();
-    })
-    .then(data => {
-      headerPlaceholder.innerHTML = data;
-    })
-    .catch(error => {
-      console.error('Error loading the header:', error);
-    });
-</script>
