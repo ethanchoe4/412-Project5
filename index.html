@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+
+  <body>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+
+    <div class="profile">
+        <div>
+            <img src="headshot.JPG" alt="Profile Image">
+        </div>
+        <div>
+            <h1> Contact Me </h1>
+            <ul class="contact-list">
+                <li>
+                    <a href="mailto:ethanchoe@tamu.edu">
+                        <i class="fa-solid fa-envelope"></i>
+                        ethanchoe@tamu.edu
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/ethanchoe1" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-linkedin"></i>
+                        linkedin.com/in/ethanchoe1
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="about-me">
+        <h1>About Me</h1>
+        <p>I am a junior computer science major at Texas A&M University. I am aspiring to be a software developer with specific
+           interests in backend development, computer vision, and data analysis. I have strong foundatations in object oriented
+           programming in Python, as displayed in my internships and undergraduate reserach. I am a highly collabrative team
+           member, and in these projects I communicated with teams to deliver on project goals and create meaningful solutions.
+           I am eager to continue applying my technical skills and collabrative mindset to future projects and endeavors.
+        </p>
+    </div>
+
+    <div class="interests">
+        <div class="interst1">
+            <h1>Computer Vision</h1>
+            <p>I am highly interested in utilizing computer vision to solve real world problems and my experiences reflect this.
+               I have designed computer vision models that can detect, segment, and track objects in many different scenarios.
+               Some of these experiences include my internship, where I fine-tuned a ResNet18 model to predict parking spot 
+               occupancy at 98% accuracy and my reserach group where I developed a instance segmentation script to create a 
+               dataset of thousands of cow masks.
+            </p>
+        </div>
+        <div class="interest2">
+            <h1>Backend Development</h1>
+            <p>I have also began exploring the world of backend development. With my previous Python experiences I quickly
+               picked up the Django framework and have begun building personal projects with it. My experience with PostgreSQL
+               has been particularly valuable, allowing me to build robust, data-driven applications. I am interesting in furthering
+               my backend experinces by learning more advanced topics like API optimizations, security features, and event-driven
+               architecture.
+            </p>
+        </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  const headerPlaceholder = document.getElementById('header-placeholder');
+
+  fetch('header.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Header not found');
+      }
+      return response.text();
+    })
+    .then(data => {
+      headerPlaceholder.innerHTML = data;
+    })
+    .catch(error => {
+      console.error('Error loading the header:', error);
+    });
+</script>

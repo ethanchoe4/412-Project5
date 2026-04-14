@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+      <title>Qualifications</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style1.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  </head>
+<body>
+     <header>
+        <div id="header-placeholder"></div>
+    </header>
+
+    <div class="resume-grid">
+        <div class="resume-image">
+            <a href="https://drive.google.com/file/d/10PCoZlx0KEcZgdKEgkPW7Bu4J6SzGKSA/view?usp=sharing" target="_blank">
+              <img src="Resume.png" alt="Resume Image">
+            </a>
+        </div>
+        <div class="resume-description">
+          <h2>Resume</h2>
+          <p>Through my coursework at Texas A&M University, internships, and personal projects, I have gained hands-on 
+             experience in software and AI development. My resume highlights my skills in a variety of programming 
+             languages and frameworks, with a strong focus on computer vision. It also details my contributions to 
+             projects like a parking spot detection model and a full-stack CRM for insurance agents. My work has been 
+             crucial to many different teams where both my technical and collaboration skills have led to real world solutions.
+          </p>
+        </div>
+    </div>
+</html>
+
+
+
+<script>
+  const headerPlaceholder = document.getElementById('header-placeholder');
+
+  fetch('header.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Header not found');
+      }
+      return response.text();
+    })
+    .then(data => {
+      headerPlaceholder.innerHTML = data;
+    })
+    .catch(error => {
+      console.error('Error loading the header:', error);
+    });
+</script>

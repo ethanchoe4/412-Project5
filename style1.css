@@ -1,0 +1,73 @@
+main {
+    padding: 2rem;
+    text-align: center;
+    font-family: Georgia, serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-family: Georgia, serif;
+
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.header-icon {
+    color: green;
+    font-size: 2rem;
+}
+
+ .name {
+    font-weight: bold;
+    font-size: 2rem;
+    padding-right: 2rem;
+}
+
+.header-right {
+    display: flex;
+    list-style: none;
+    padding: 20;
+    margin: 0;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.header-right ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1.5rem;
+}
+
+.header-right nav li {
+    text-decoration: none;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.profile img {
+    max-width: 100%;
+    height: auto; 
+}
+
+.interests {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
